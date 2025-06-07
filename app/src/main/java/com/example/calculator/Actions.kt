@@ -26,7 +26,7 @@ class Actions {
             val ex = ExpressionBuilder(binding.mathOperation.text.toString()).build()
             val result = ex.evaluate().toBigDecimal().stripTrailingZeros()
             round(result.toDouble())
-            
+
             binding.operationResult.text = result.toString()
         } catch (e: ArithmeticException) {
             Log.d("Ошибка", "сообщение: ${e.message}")
